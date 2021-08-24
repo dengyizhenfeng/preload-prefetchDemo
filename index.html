@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>test</title>
+    <style type="text/css">
+      @font-face {
+        font-family: 'tt';
+        src: url('./webfont.ttf');
+      }
+      .custom-font {
+        font-family: 'tt';
+        font-size: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a"></div>
+    <p class="custom-font">HEAD</p>
+    <img style="width: 100px; height: 100px" src="./750-480.png" alt="" />
+    <video
+      style="width: 100px; height: 100px"
+      src="./sp.mp4"
+    ></video>
+    <script src="./a.js"></script>
+    <script src="./b.js" defer></script>
+    <script>
+      window.addEventListener('load',() => {
+      	// 引入图片
+        const img = document.createElement('img')
+        img.src = './test.png'
+        document.body.appendChild(img)
+        // 引入js
+        const js = document.createElement('script')
+        js.src = './c.js'
+        document.body.appendChild(js)
+        // 引入css
+        const css = document.createElement('link')
+        css.href = './style.css'
+        css.rel = 'stylesheet'
+        document.head.appendChild(css)
+      })
+    </script>
+  </body>
+</html>
